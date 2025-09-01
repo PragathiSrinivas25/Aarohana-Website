@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aarohana Foundation | Youth-Led Social Impact </title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Team Section Styles */
+    .team-section {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .team-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 60px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .team-member {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .member-image {
+      width: 100%;
+      height: 320px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .member-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .team-member:hover .member-image img {
+      transform: scale(1.05);
+    }
+
+    .member-info {
+      padding: 25px 20px;
+    }
+
+    .member-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--secondary);
+    }
+
+    .member-role {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .member-bio {
+      color: var(--text-light);
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .member-social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--gray-100);
+      color: var(--text);
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+      color: var(--secondary);
+      transform: translateY(-3px);
+    }
+
+    .section-anchor {
+      position: relative;
+      top: -100px;
+      visibility: hidden;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 25px;
+      }
+
+      .member-image {
+        height: 280px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+      }
+
+      .member-image {
+        height: 250px;
+      }
+
+      .member-name {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto 50px;
+      }
+
+      .member-image {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><img src="assets/images/logo/Aarohana logo.png" alt=""
+            style="width: 93px;margin-right: 10px;"></div>
+        <div class="logo-text">
+          <h1>Aarohana Foundation</h1>
+          <span>Youth-Led Social Impact</span>
+        </div>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <!-- About Us with dropdown -->
+          <li class="dropdown">
+            <a href="about.html" class="dropdown-toggle">About Us <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html#vision-mission">Vision</a></li>
+              <li><a href="about.html#vision-mission">Mission</a></li>
+              <li class="dropdown-submenu">
+                <a href="about.html#initiatives">Key Initiatives</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Our Team with dropdown -->
+          <li class="dropdown">
+            <a href="#team" class="dropdown-toggle">Our Team <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#executive">Executive Committee</a></li>
+              <li><a href="#members">Our Members</a></li>
+            </ul>
+          </li>
+
+          <!-- Other navigation items -->
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li class="dropdown">
+            <a href="#join" class="dropdown-toggle">Join us <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="join.html#internship">Internship</a></li>
+              <li><a href="join.html#membership">Our Members</a></li>
+              <li><a href="join.html#partnership">Partnership</a></li>
+              <li><a href="join.html#newsletter">Newsletter</a></li>
+            </ul>
+          </li>
+          <li><a href="#donate" class="nav-cta">Donate Now</a></li>
+        </ul>
+        <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Team Section -->
+  <section class="team-section" id="team">
+    <div class="container">
+      <div class="section-title">
+        <h2>Meet Our Team</h2>
+        <p>The passionate individuals driving our mission forward</p>
+      </div>
+
+      <div class="team-intro">
+        <p>Our team consists of dedicated youth volunteers who are committed to creating positive change in our
+          community. Each member brings unique skills, perspectives, and energy to our initiatives.</p>
+      </div>
+
+      <!-- Executive Committee Section -->
+      <div id="executive" class="section-anchor"></div>
+      <div class="section-title">
+        <h3>Executive Committee</h3>
+        <p>The leadership team guiding our organization</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Rahul Sharma">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">Rahul Sharma</h3>
+            <div class="member-role">President & Founder</div>
+            <p class="member-bio">Rahul founded Aarohana with a vision to empower youth to create sustainable social
+              impact through collaborative action.</p>
+            <div class="member-social">
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Priya Patel">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">Priya Patel</h3>
+            <div class="member-role">Vice President</div>
+            <p class="member-bio">Priya oversees our community outreach programs and ensures our initiatives align with
+              local needs and priorities.</p>
+            <div class="member-social">
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Arjun Kumar">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">Arjun Kumar</h3>
+            <div class="member-role">Secretary</div>
+            <p class="member-bio">Arjun manages our operations and coordinates between different teams to ensure smooth
+              execution of projects.</p>
+            <div class="member-social">
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Neha Singh">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">Neha Singh</h3>
+            <div class="member-role">Treasurer</div>
+            <p class="member-bio">Neha manages our finances and ensures transparent allocation of resources to maximize
+              our impact.</p>
+            <div class="member-social">
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Members Section -->
+      <div id="members" class="section-anchor"></div>
+      <div class="section-title">
+        <h3>Our Members</h3>
+        <p>The dedicated volunteers who make our work possible</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Aisha Khan">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">Aisha Khan</h3>
+            <div class="member-role">Community Volunteer</div>
+            <p class="member-bio">Aisha has been with Aarohana for over a year, actively participating in healthcare
+              camps and community outreach.</p>
+            <div class="member-social">
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Rohan Mehta">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">Rohan Mehta</h3>
+            <div class="member-role">Content Volunteer</div>
+            <p class="member-bio">Rohan helps create engaging content to spread awareness about our initiatives and
+              attract more volunteers.</p>
+            <div class="member-social">
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Sanjana Reddy">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">Sanjana Reddy</h3>
+            <div class="member-role">Event Volunteer</div>
+            <p class="member-bio">Sanjana specializes in organizing and managing events, ensuring every initiative runs
+              smoothly and successfully.</p>
+            <div class="member-social">
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Vikram Malhotra">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">Vikram Malhotra</h3>
+            <div class="member-role">Environmental Projects Lead</div>
+            <p class="member-bio">Vikram coordinates our environmental initiatives, including tree plantation drives and
+              community clean-up campaigns.</p>
+            <div class="member-social">
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Meera Desai">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">Meera Desai</h3>
+            <div class="member-role">Education Volunteer</div>
+            <p class="member-bio">Meera teaches at our weekend learning centers, helping underprivileged children with
+              their studies.</p>
+            <div class="member-social">
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Karan Joshi">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">Karan Joshi</h3>
+            <div class="member-role">Social Media Manager</div>
+            <p class="member-bio">Karan manages our social media presence and creates content that highlights our impact
+              and community stories.</p>
+            <div class="member-social">
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>About Aarohana</h4>
+          <p>A youth-led organization dedicated to coordinating and delivering comprehensive charitable support across
+            our community.</p>
+          <p>Registered under the Karnataka Societies Registration Act, 1960</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#mission">Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="#volunteer">Join us</a></li>
+            <li><a href="#donate">Donate Now</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Initiatives</h4>
+          <ul class="footer-links">
+            <li><a href="#">Education for Underprivileged</a></li>
+            <li><a href="#">Emergency Medical Funding</a></li>
+            <li><a href="#">Disaster Relief & Response</a></li>
+            <li><a href="#">Environmental Initiatives</a></li>
+            <li><a href="#">Civic Engagement Projects</a></li>
+            <li><a href="#">The Bengaluru Pothole Project</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Subscribe to our newsletter to stay updated with our activities and impact stories.</p>
+
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your Email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <p>&copy; 2025 Aarohana Foundation. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Handle navigation from dropdown menu
+    document.addEventListener('DOMContentLoaded', function () {
+      // Check if URL has hash and scroll to section
+      if (window.location.hash) {
+        setTimeout(function () {
+          const target = document.querySelector(window.location.hash);
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        }, 100);
+      }
+
+      // Update dropdown links to point to correct page with hash
+      const executiveLink = document.querySelector('a[href="team.html#executive"]');
+      const membersLink = document.querySelector('a[href="team.html#members"]');
+
+      if (executiveLink && window.location.pathname.endsWith('team.html')) {
+        executiveLink.setAttribute('href', '#executive');
+      }
+
+      if (membersLink && window.location.pathname.endsWith('team.html')) {
+        membersLink.setAttribute('href', '#members');
+      }
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
