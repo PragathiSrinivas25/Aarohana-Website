@@ -14,6 +14,198 @@
   <link rel="stylesheet" href="assets/css/contactUs.css">
 </head>
 
+<style>
+  #contact {
+  padding-top: 120px; /* adjust based on your header height */
+}
+
+       .contact {
+      padding: 80px 0;
+      background: var(--gray-100);
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+
+    .contact-info p {
+      color: var(--text-light);
+      margin-bottom: 30px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--secondary);
+      flex-shrink: 0;
+    }
+
+    .contact-text h4 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: var(--text-dark);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+      color: var(--secondary);
+    }
+
+    .contact-form {
+      background: var(--white);
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-form h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius);
+      font-family: inherit;
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+    }
+
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #FF5252;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive styles */
+    @media (max-width: 992px) {
+      .contact-container {
+        gap: 40px;
+      }
+
+      .contact-form {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info h3 {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .contact {
+        padding: 60px 15px;
+      }
+
+      .contact-detail {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .contact-form {
+        padding: 25px;
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+    }
+</style>
+
 <body>
   <header id="header">
     <div class="header-container">
@@ -71,10 +263,8 @@
 
 
 
-  <!-- Mission Vision Section -->
-
-  <body>
-    <section id="contact" class="section contact">
+<!-- 
+    <section id="contact" class="section contact" style="margin-top: 10px;">
       <div class="container">
         <div class="section-title">
           <h2>Get In Touch</h2>
@@ -151,12 +341,87 @@
           </div>
         </div>
       </div>
-    </section>
-  </body>
+    </section> -->
+ 
+
+     <section id="contact" class="section contact" style="margin-top: 10px;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Get In Touch</h2>
+        <p>We'd love to hear from you. Reach out to collaborate, volunteer, or support our initiatives.</p>
+      </div>
+
+      <div class="contact-container">
+        <!-- Left: Info -->
+        <div class="contact-info">
+          <h3>Connect With Us</h3>
+          <p>Everything you need, one scan away. Follow, volunteer, donate, intern, or partner with us.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-text">
+                <h4>Address</h4>
+                <p>No. 122/16, Unit No F-5, Monarch Chambers, Infantry Road, Bengaluru - 560 001</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <p>contact@aarohana.org</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form">
+          <h3>Send a Message</h3>
+          <form>
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea id="message" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Initiatives Section -->
 
-</body>
+
 <footer>
   <div class="container">
     <div class="footer-content">
@@ -212,43 +477,7 @@
   </div>
 </footer>
 
-<script> function openModal(type) {
-    document.getElementById(`${type}-modal`).style.display = 'flex';
-  }
 
-  function closeModal(type) {
-    document.getElementById(`${type}-modal`).style.display = 'none';
-  }
-
-  // Close modal when clicking outside content
-  window.onclick = function (event) {
-    if (event.target.classList.contains('modal')) {
-      event.target.style.display = 'none';
-    }
-  }
-
-  // Mobile menu functionality
-  document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-  });
-
-  // Smooth scrolling for navigation
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 80, // Adjust for header height
-          behavior: 'smooth'
-        });
-      }
-    });
-  });</script>
-
-
+<script src="assets/js/main.js"></script>
+ </body>
 </html>

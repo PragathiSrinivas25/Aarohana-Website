@@ -1,5 +1,11 @@
 /* Projects Section */
-    .projects-section {
+#projects {
+  padding-top: 120px; /* adjust based on your header height */
+}
+
+
+
+.projects-section {
       padding: 80px 0;
       background-color: #f8fafc;
     }

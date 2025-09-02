@@ -683,3 +683,62 @@
          padding: 60px 0;
      }
  }
+
+ /* Initiatives Section */
+    .initiatives-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .initiative-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      height: 100%;
+    }
+
+    .initiative-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .initiative-image {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .initiative-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .initiative-card:hover .initiative-image img {
+      transform: scale(1.05);
+    }
+
+    .initiative-content {
+      padding: 25px;
+    }
+
+    .initiative-number {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: var(--primary);
+      color: var(--secondary);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .initiative-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }

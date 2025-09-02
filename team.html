@@ -143,16 +143,22 @@
     }
 
     @media (max-width: 576px) {
-      .team-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto 50px;
-      }
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 15px; /* optional, adjust spacing */
+    max-width: 100%; /* let it use full width */
+    margin: 0 auto 50px;
+  }
 
-      .member-image {
-        height: 300px;
-      }
-    }
+  .member-image {
+    height: 150px; /* optional, make them smaller to fit */
+  }
+
+  .member-name {
+    font-size: 1rem; /* optional, adjust text size */
+  }
+}
+
   </style>
 </head>
 
