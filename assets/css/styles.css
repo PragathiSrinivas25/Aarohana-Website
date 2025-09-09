@@ -688,11 +688,36 @@
  }
 
  /* Initiatives Section */
-    .initiatives-container {
+    /* .initiatives-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
-    }
+    } */
+
+   /* Initiatives Section */
+.initiatives-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 4 columns on large screens */
+  gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .initiatives-container {
+    grid-template-columns: repeat(2, 1fr); /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .initiatives-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .initiatives-container {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
 
     .initiative-card {
       background: var(--white);
